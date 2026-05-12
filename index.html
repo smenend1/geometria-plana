@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geometria plana - PWA</title>
+  <meta name="theme-color" content="#2563eb">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">PWA instal·lable</p>
+      <h1>Geometria plana</h1>
+    </div>
+    <button id="installBtn" class="install hidden">Instal·la</button>
+  </header>
+
+  <main class="layout">
+    <section class="card controls">
+      <label for="shapeSelect">Escull una figura o tema</label>
+      <select id="shapeSelect"></select>
+
+      <div class="formulaBox">
+        <div id="shapeImage" class="shapeImage" aria-label="Dibuix de la figura"></div>
+        <div>
+          <h2 id="shapeName"></h2>
+          <p id="shapeDesc"></p>
+          <div id="formulaList" class="formulaList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card calculator">
+      <h2>Calculadora</h2>
+      <p class="hint">Tria què vols calcular. El camp corresponent queda en blanc i l’app el calcula amb les dades que introdueixis.</p>
+
+      <label for="calcSelect">Càlcul</label>
+      <select id="calcSelect"></select>
+
+      <div id="inputs" class="inputs"></div>
+
+      <button id="calcBtn" class="primary">Calcula</button>
+      <button id="clearBtn" class="secondary">Neteja</button>
+
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+
+    <section class="card notes">
+      <h2>Recordatori ràpid</h2>
+      <ul>
+        <li>Utilitza sempre les mateixes unitats abans de calcular.</li>
+        <li>Les àrees surten en unitats quadrades: cm², m²...</li>
+        <li>Les longituds surten en unitats simples: cm, m...</li>
+        <li>Pots escriure decimals amb punt o coma.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>Funciona sense internet després d’obrir-la un cop. Fes “Afegir a la pantalla d’inici” si el navegador no mostra el botó d’instal·lació.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
